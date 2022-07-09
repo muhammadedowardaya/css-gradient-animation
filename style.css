@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
+
+:root {
+    --gradient1: linear-gradient(90deg, #3ec1d3, #a1eafb);
+    --gradient2: linear-gradient(90deg,#000 45%, #fff 50%,#000 55%);
+}
+body {
+    min-height: 100vh;
+    background-color: #000;
+    /* background-image: radial-gradient(#999,#000); */
+    /* background-size: 200%; */
+    /* animation: gradient-animation 10s infinite alternate; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 5rem;
+    font-family: "Lilita One", cursive;
+    background-image: var(--gradient2);
+    background-clip: text;
+    background-size: 198%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+    /* background-position: left; */
+    animation: gradient-animation 2s infinite alternate ease-in-out;
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: right;
+    }
+    100% {
+        background-position: left;
+    }
+}
+
